@@ -1,0 +1,1 @@
+main = print((3 < 8) && (False == False))
