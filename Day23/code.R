@@ -1,5 +1,5 @@
 #source:http://www.everydayanalytics.ca/2014/12/the-mandelbrot-set-in-r.html
-cols=colorRampPalette(c("blue","yellow","red","black"))(13)
+cols=colorRampPalette(c("red","yellow","blue","black"))(203)
 xmin = -2
 xmax = 3
 nx = 250
@@ -19,7 +19,7 @@ for (rep in 1:n) {
   print(rep)
   for (i in 1:nx) { 
     for (j in 1:ny) { 
-      if(Mod(z[i,j]) < 2 && k[i,j] < n) {
+      if(Mod(z[i,j]) < 4 && k[i,j] < n) {
         z[i,j] <- z[i,j]^2 + c[i,j]
         k[i,j] <- k[i,j] + 1
       }
